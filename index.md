@@ -9,6 +9,17 @@ El procesador utiliza la información de las entradas para generar salidas (a un
 
 A través de sensores o captadores de datos, obtendremos magnitudes físicas (velocidad, aceleración, temperatura, fuerza, presión, inclinación) que se pueden convertir en electricidad que Arduino puede medir.
 
+## Características de los pines
+
+En el _board_ nos encontramos dos filas de pines diferentes.
+
+!(/imagenes/board.png)
+
+Arriba, los pines digitales, numerados de 0 al 13. Solo pueden tener 2 estados y pueden ser tanto entradas como salidas. 
+
+Abajo, los pines analógicos, de 0 a 5. Están pensados para *captar* aquello que varía en su voltaje y solo pueden ser entradas. 
+
+
 ### Webs de interés
 
 Desde [Arduino](https://www.arduino.cc/en/Main/Software) podemos descargar el IDE de desarrollo con el que trabajaremos.
