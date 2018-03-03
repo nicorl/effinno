@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Bienvenido a la página del proyecto Arduino
 
 You can use the [editor on GitHub](https://github.com/nicorl/effinno/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
