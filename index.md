@@ -13,7 +13,7 @@ A través de sensores o captadores de datos, obtendremos magnitudes físicas (ve
 
 En el _board_ nos encontramos dos filas de pines diferentes.
 
-<center><img src="imagenes/board.png" height="300" width="450"/></center>
+<div style="text-align:center"><img src="imagenes/board.png" height="300" width="450"/></div>
 
 Arriba, los pines digitales, numerados de 0 al 13. Solo pueden tener 2 estados y pueden ser tanto entradas como salidas. 
 
