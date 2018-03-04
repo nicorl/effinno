@@ -2,3 +2,7 @@
 ---
 
 @import "{{ site.theme }}";
+
+.verticalLine {
+  border-left: thick solid #847c7c;
+}
