@@ -123,7 +123,7 @@ void loop() {
 ```
 Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/93e95293-c2b8-403e-b50d-0ed53ce50dc3/preview)
 
-`Mejora de código`
+### `Mejora de código`
 
 ```javascript
 int estado = 0;         // Declarar variables
