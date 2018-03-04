@@ -19,7 +19,7 @@ Arriba, los pines digitales, numerados de 0 al 13. Solo pueden tener 2 estados y
 
 Abajo, los pines analógicos, de 0 a 5. Están pensados para *captar* aquello que varía en su voltaje y solo pueden ser entradas. 
 
-A la izquierda de los pines analógicos, los pines de conexión.
+A la izquierda de los pines analógicos, las salidas de voltaje 5V, 3.3V, GRD (tierra).
 
 
 ### Webs de interés
