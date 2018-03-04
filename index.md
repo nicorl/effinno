@@ -21,6 +21,39 @@ Abajo, los pines analógicos, de 0 a 5. Están pensados para *captar* aquello qu
 
 A la izquierda de los pines analógicos, las salidas de voltaje 5V, 3.3V, GRD (tierra).
 
+## Conectando el _board_
+
+Desde la IDE de Arduino, en el menú superior:
+
+Elegimos nuestro modelo
+```
+Tools > Board > 
+```
+Elegimos el puerto COM al que está conectado el dispositivo
+```
+Tools > Serials Port >
+```
+## Funciones básicas de Arduino
+
+### La función setup()
+
+La utilizamos para configurar salidas y entradas.
+
+```
+void setup() {
+
+}
+```
+
+### La función loop()
+
+Utilizada para el código que está en constante ejecución.
+
+```
+void setup() {
+
+}
+```
 
 ### Webs de interés
 
