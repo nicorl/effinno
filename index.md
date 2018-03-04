@@ -104,6 +104,25 @@ El LED tiene polaridad, por lo que se conecta de una manera concreta. El extremo
 
 <img src="imagenes/esquemaelectricoArduino01.png" height="400" width="600"/>
 
+```javascript
+int estado = 0; // Declarar una variable tipo Integer (numérica entero, 0, 1, 2, 3).
+
+void setup() {
+    pinMode(8, INPUT)   // Declarar el botón como entrada
+    pinMode(4, OUTPUT)  // Declarar el LED como salida
+}
+
+void loop() {
+    estado = digitalRead(8); // Leer el pin 8 y guardarlo enla variable 'estado'
+    if(estado == HIGH){ // Compara si la variable estado es == HIGH
+      digitalWrite(4, HIGH); // Encender el LED
+    } else { // En caso de que estado no sea HIGH
+      digitalWrite(4, LOW); // Apagar el LED
+    }
+}
+```
+
+
 ### Webs de interés
 
 Desde [Arduino](https://www.arduino.cc/en/Main/Software) podemos descargar el IDE de desarrollo con el que trabajaremos.
