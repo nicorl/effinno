@@ -78,7 +78,7 @@ Información necesaria: Arduino UNO trae un LED integrado en el pin digital 13.
 
 Ya que los pines digitales pueden ser E/S, en el *setup* hay que declarar que utilizaremos el pin 13 como salida.
 
-```python
+```javascript
 void setup() { // Código que se ejecuta una única vez.
   pinMode(13, OUTPUT); // Declaración del pin 13 como salida. // LED_BUILTIN
 }
@@ -104,7 +104,7 @@ El LED tiene polaridad, por lo que se conecta de una manera concreta. El extremo
 
 <img src="imagenes/esquemaelectricoArduino01.png" height="400" width="600"/>
 
-```python
+```javascript
 int estado = 0; // Declarar una variable tipo Integer (numérica entero, 0, 1, 2, 3).
 
 void setup() {
@@ -125,7 +125,7 @@ Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/93e95293-c
 
 ### `Mejora de código`
 
-```python
+```javascript
 int estado = 0;         // Declarar variables
 int estadoAnterior = 0;
 int salida = 0;
@@ -157,6 +157,8 @@ Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/65353358-6
 ## Proyecto 0.2 
 
 **Objetivo**: regular la intensidad del LED de manera automática.
+
+
 
 
 
