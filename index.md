@@ -139,8 +139,8 @@ void loop() {
     estado = digitalRead(8);                           // Leer valor del PIN 8
     
     if((estado == HIGH) && (estadoAnterior == LOW)) {  // ¿Valor PIN = 8 y antes estadoAnterior = 0?
-      salida = 1 - salida;                             // salida = 1 o 0
-      delay(20);                                       // Espera
+    salida = 1 - salida;                               // salida = 1 o 0
+    delay(20);                                         // Espera
     }
     
     estadoAnterior = estado;                           // Donde antes estadoAnterior = 0, ahora = 1.
