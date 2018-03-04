@@ -121,7 +121,38 @@ void loop() {
     }
 }
 ```
+Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/93e95293-c2b8-403e-b50d-0ed53ce50dc3/preview)
 
+$ Mejora
+
+```javascript
+int estado = 0;         // Declarar variables
+int estadoAnterior = 0;
+int salida = 0;
+
+void setup() {
+    pinMode(8, INPUT)   // Declarar el botón como entrada
+    pinMode(4, OUTPUT)  // Declarar el LED como salida
+}
+
+void loop() {
+    estado = digitalRead(8);                           // Leer valor del PIN 8
+    
+    if((estado == HIGH) && (estadoAnterior == LOW)) {  // ¿Valor PIN = 8 y antes estadoAnterior = 0?
+      salida = 1 - salida;                             // salida = 1 o 0
+      delay(20);                                       // Espera
+    }
+    
+    estadoAnterior = estado;                           // Donde antes estadoAnterior = 0, ahora = 1.
+    
+    if(salida == 1){                                   // Si salida = 1
+      digitalWrite(4, HIGH);                           // Encender LED
+    } else {                                           // Si salida != 1
+      digitalWrite(4, LOW);                            // Apagar LED
+    }
+}
+```
+Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/65353358-6e26-4849-ae9e-69f7e2ab376e/preview)
 
 ### Webs de interés
 
