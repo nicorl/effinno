@@ -33,7 +33,7 @@ A la izquierda de los pines analógicos, las salidas de voltaje 5V, 3.3V, GRD (t
 
 Existen dos secciones con diferente diposición, una horizontal y otra vertical. Los 5 puntos que conforman cada línea vertical están conectados entre sí al mismo punto. Cada hilera horizontal está conectada a un mismo punto también.
 
-<img src="imagenes/protoboard.png" height="300" width="600"/>
+<img src="imagenes/protoboard.png" height="225" width="600"/>
 
 ## Conectando el _board_
 
@@ -100,9 +100,9 @@ Componentes necesarios: Placa Arduino, LED, 2 resistencias, Botón y Protoboard.
 
 El LED tiene polaridad, por lo que se conecta de una manera concreta. El extremo plano (el cátodo, la parte negativa) va a tierra y le conectaremos ahí una resistencia. El lado positivo (el ánodo) lo conectaremos directamente a un pin digital.
 
-<img src="imagenes/esquemaArduino01.png" height="300" width="600"/>
+<img src="imagenes/esquemaArduino01.png" height="400" width="600"/>
 
-<img src="imagenes/esquemaelectricoArduino01.png" height="300" width="600"/>
+<img src="imagenes/esquemaelectricoArduino01.png" height="400" width="600"/>
 
 ### Webs de interés
 
