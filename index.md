@@ -54,6 +54,7 @@ void setup() {
 
 }
 ```
+Más, en la [Wiki de Funciones](https://github.com/nicorl/effinno/wiki/Manual-de-funciones)
 
 ### Webs de interés
 
