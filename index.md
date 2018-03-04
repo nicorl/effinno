@@ -76,7 +76,7 @@ void loop(){ // Código que se ejecuta constantemente.
   delay(1000); // Espera 1 segundo
 }
 ```
-
+Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/479d5c08-82a6-4aa8-a39e-5da9fe516b02/preview)
 
 ### Webs de interés
 
