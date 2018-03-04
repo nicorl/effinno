@@ -64,7 +64,7 @@ Información necesaria: Arduino UNO trae un LED integrado en el pin digital 13.
 
 Ya que los pines digitales pueden ser E/S, hay que decir que queremos utilizar el pin 13 como salida.
 
-```
+```javascript
 void setup() { // Código que se ejecuta una única vez.
   pinMode(13, OUTPUT); // Declaración del pin 13 como salida. // LED_BUILTIN
 }
