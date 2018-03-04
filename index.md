@@ -66,14 +66,14 @@ Ya que los pines digitales pueden ser E/S, hay que decir que queremos utilizar e
 
 ```
 void setup() { // Código que se ejecuta una única vez.
-pinMode(13, OUTPUT); // Declaración del pin 13 como salida. // LED_BUILTIN
+  pinMode(13, OUTPUT); // Declaración del pin 13 como salida. // LED_BUILTIN
 }
 
 void loop(){ // Código que se ejecuta constantemente.
-digitalWrite(13, HIGH); // Se enciende el LED // LED_BUILTIN
-delay(1000); // Espera 1 segundo
-digitalWrite(13, LOW); // Se apaga el LED // LED_BUILTIN
-delay(1000); // Espera 1 segundo
+  digitalWrite(13, HIGH); // Se enciende el LED // LED_BUILTIN
+  delay(1000); // Espera 1 segundo
+  digitalWrite(13, LOW); // Se apaga el LED // LED_BUILTIN
+  delay(1000); // Espera 1 segundo
 }
 ```
 
