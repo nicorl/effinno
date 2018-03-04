@@ -9,7 +9,15 @@ El procesador utiliza la información de las entradas para generar salidas (a un
 
 A través de sensores o captadores de datos, obtendremos magnitudes físicas (velocidad, aceleración, temperatura, fuerza, presión, inclinación) que se pueden convertir en electricidad que Arduino puede medir.
 
-## Características de los pines
+## Electrónica básica
+
+Simbología [aquí](http://www.electronicaestudio.com/simbologia.htm)
+
+Ley de Ohm y componentes de electrónica básica [aquí](https://aprendiendoarduino.wordpress.com/2016/06/26/componentes-electronicos/)
+
+Ley de corriente y caudal de flujo [aquí](http://hyperphysics.phy-astr.gsu.edu/hbasees/electric/watcir2.html)
+
+## Características de los pines en el _board_
 
 En el _board_ nos encontramos dos filas de pines diferentes.
 
@@ -20,6 +28,12 @@ Arriba, los pines digitales, numerados de 0 al 13. Solo pueden tener 2 estados y
 Abajo, los pines analógicos, de 0 a 5. Están pensados para *captar* aquello que varía en su voltaje y solo pueden ser entradas. 
 
 A la izquierda de los pines analógicos, las salidas de voltaje 5V, 3.3V, GRD (tierra).
+
+## Características del _protoboard_
+
+Existen dos secciones con diferente diposición, una horizontal y otra vertical. Los 5 puntos que conforman cada línea vertical están conectados entre sí al mismo punto. Cada hilera horizontal está conectada a un mismo punto también.
+
+<img src="imagenes/protoboard.png" height="300" width="600"/>
 
 ## Conectando el _board_
 
@@ -62,7 +76,7 @@ Más, en la [Wiki de Funciones](https://github.com/nicorl/effinno/wiki/Manual-de
 
 Información necesaria: Arduino UNO trae un LED integrado en el pin digital 13.
 
-Ya que los pines digitales pueden ser E/S, hay que decir que queremos utilizar el pin 13 como salida.
+Ya que los pines digitales pueden ser E/S, en el *setup* hay que declarar que utilizaremos el pin 13 como salida.
 
 ```javascript
 void setup() { // Código que se ejecuta una única vez.
@@ -77,6 +91,18 @@ void loop(){ // Código que se ejecuta constantemente.
 }
 ```
 Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/479d5c08-82a6-4aa8-a39e-5da9fe516b02/preview)
+
+## Proyecto 0.1
+
+**Objetivo**: encender y apagar el LED mediante un botón.
+
+Componentes necesarios: Placa Arduino, LED, 2 resistencias, Botón y Protoboard.
+
+El LED tiene polaridad, por lo que se conecta de una manera concreta. El extremo plano (el cátodo, la parte negativa) va a tierra y le conectaremos ahí una resistencia. El lado positivo (el ánodo) lo conectaremos directamente a un pin digital.
+
+<img src="imagenes/esquemaArduino01.png" height="300" width="600"/>
+
+<img src="imagenes/esquemaelectricoArduino01.png" height="300" width="600"/>
 
 ### Webs de interés
 
