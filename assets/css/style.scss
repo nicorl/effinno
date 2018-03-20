@@ -6,9 +6,10 @@
 .verticalLine {
   border-left: thick solid #847c7c;
 }
-#menulateral {
-    position: relative;
-    left: 20px;
-    width: 200px;
-    border: 3px solid #93cc3b;
+div {
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
 }
