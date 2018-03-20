@@ -154,13 +154,35 @@ void loop() {
 ```
 Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/65353358-6e26-4849-ae9e-69f7e2ab376e/preview)
 
-## Proyecto 0.2 
+### Alternativa 2 - Proyecto 0.1
 
-**Objetivo**: regular la intensidad del LED de manera automática.
+Utilizando el pin 13 como salida, evitamos incluir una resistencia extra ya que la propia placa ya la tiene incluida.
 
+<img src="imagenes/esquemaArduino01Alternativa.png" height="400" width="600"/>
 
+```javascript
+int pinLED = 13;              // Crear variable para asignar el Pin del LED
+int pinEntrada = 5;           // Crear variable para asignar el Pin del botón
+int valor = 0;                // Variable para leer el estado del Pin
 
+void setup() {
+  pinMode(pinLED, OUTPUT);    // Declarar LED como salida
+  pinMode(pinEntrada, INPUT); // Declarar botón como entrada
+}
 
+void loop() {
+  valor = digitalPin(pinEntrada); // Recoger el valor del pin
+  if (valor == HIGH) {            // ¿Es el valor del pin == HIGH == 1 == PRESIONADO?
+    digitalWrite(pinLED, LOW);    // Apagar el LED
+  } else {
+    digitalWrite(pinLED, LOW);    // Apagar el LED
+    delay(500);
+    digitalWrite(pinLED, HIGH);   // Encender el LED
+    delay(500);
+  }
+}
+
+```
 
 
 ### Webs de interés
