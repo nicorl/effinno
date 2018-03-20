@@ -1,7 +1,3 @@
-<div id=anuncio>
-  [Encuesta](https://goo.gl/fToVqH)
-  </div>
-
 ## Proyecto Arduino
 
 Esta página ha sido creada con el propósito de recoger la información que nos conduzca al éxito de manejar las diferentes herramientas de desarrollo a la hora de llevar a cabo un proyecto Arduino.
@@ -197,6 +193,9 @@ Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/7c62f97e-a
 
 Componentes necesarios: Placa Arduino, 3 LEDs, 3 resistencias y protoboard.
 
+### Encuesta del curso
+
+[Encuesta](https://goo.gl/fToVqH)
 
 ### Webs de interés
 
