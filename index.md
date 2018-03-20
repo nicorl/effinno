@@ -187,6 +187,13 @@ void loop() {
 ```
 Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/7c62f97e-a9fa-4e3a-9127-4b9b51d28010/preview)
 
+## Secuencia básica de 3 LEDs
+
+**Objetivo**: Encender 3 LEDs, por orden y con una cadencia determinada.
+
+Componentes necesarios: Placa Arduino, 3 LEDs, 3 resistencias y protoboard.
+
+
 ### Webs de interés
 
 Desde [Arduino](https://www.arduino.cc/en/Main/Software) podemos descargar el IDE de desarrollo con el que trabajaremos.
