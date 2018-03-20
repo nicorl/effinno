@@ -195,7 +195,7 @@ Componentes necesarios: Placa Arduino, 3 LEDs, 3 resistencias y protoboard.
 
 ### Encuesta del curso
 
-[Encuesta](https://goo.gl/fToVqH)
+[Encuesta](https://docs.google.com/forms/d/18nUbC7JfNeWw9XNoktKNvuYjwp0l7hzUayIeoaZf28Y)
 
 ### Webs de interés
 
