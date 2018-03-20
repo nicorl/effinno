@@ -1,3 +1,7 @@
+<div id=anuncio>
+  [Encuesta](https://goo.gl/fToVqH)
+  </div>
+
 ## Proyecto Arduino
 
 Esta página ha sido creada con el propósito de recoger la información que nos conduzca al éxito de manejar las diferentes herramientas de desarrollo a la hora de llevar a cabo un proyecto Arduino.
