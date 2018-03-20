@@ -160,6 +160,8 @@ Utilizando el pin 13 como salida, evitamos incluir una resistencia extra ya que 
 
 <img src="imagenes/esquemaArduino01Alternativa.png" height="400" width="600"/>
 
+<img src="imagenes/esquemaelectricoArduino01Alternativa.png" height="400" width="600"/>
+
 ```javascript
 int pinLED = 13;              // Crear variable para asignar el Pin del LED
 int pinEntrada = 5;           // Crear variable para asignar el Pin del botón
@@ -183,7 +185,7 @@ void loop() {
 }
 
 ```
-
+Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/7c62f97e-a9fa-4e3a-9127-4b9b51d28010/preview)
 
 ### Webs de interés
 
