@@ -225,6 +225,8 @@ void loop() {
 
 ```
 
+Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/ee5ebd67-4c3e-41a9-8eef-c0f36c4ed7c6/preview)  
+
 ### Encuesta del curso
 
 [Encuesta](https://docs.google.com/forms/d/18nUbC7JfNeWw9XNoktKNvuYjwp0l7hzUayIeoaZf28Y)
