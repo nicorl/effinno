@@ -193,6 +193,38 @@ Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/7c62f97e-a
 
 Componentes necesarios: Placa Arduino, 3 LEDs, 3 resistencias y protoboard.
 
+<img src="imagenes/esquemaSecuencia3LEDs.png" height="400" width="600"/>
+
+<img src="imagenes/esquemaelectricoSecuencia3LEDs.png" height="400" width="600"/>
+
+```javascript
+int led1 = 6; //Define la salida del led 1 (salida 6)
+int led2 = 7; //Define la salida del led 2 (salida 7)
+int led3 = 8; //Define la salida del led 3 (salida 8)
+
+void setup() {
+  pinMode(led1, OUTPUT); //Declara el led 1 como salida
+  pinMode(led2, OUTPUT); //Declara el led 2 como salida
+  pinMode(led3, OUTPUT); //Declara el led 3 como salida
+  digitalWrite(pin1, LOW); //Apaga el led 1
+  digitalWrite(pin2, LOW); //Apaga el led 2
+  digitalWrite(pin3, LOW); //Apaga el led 3
+}
+
+void loop() {
+  digitalWrite(pin1, HIGH); // Enciende led 1
+  delay(200);               // Espera 200 ms
+  digitalWrite(pin1, LOW);  // Apaga led 1
+  digitalWrite(pin2, HIGH); // Enciende led 2
+  delay(200);               // Espera 200 ms
+  digitalWrite(pin2, LOW);  // Apaga led 2
+  digitalWrite(pin3, HIGH); // Enciende led 3
+  delay(200);               // Espera 200 ms
+  digitalWrite(pin3, LOW);  // Apaga led 3
+}
+
+```
+
 ### Encuesta del curso
 
 [Encuesta](https://docs.google.com/forms/d/18nUbC7JfNeWw9XNoktKNvuYjwp0l7hzUayIeoaZf28Y)
