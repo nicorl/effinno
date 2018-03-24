@@ -258,9 +258,11 @@ Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/ee5ebd67-4
 
 ### Inclinación
 
-**Objetivo**: Encender un LED cuando alcance una determinada inclinación el protoboard.
+**Objetivo**: Encender un LED mediante un sensor de inclinación.
 
-Componentes necesarios: Placa Arduino, LED, Sensor de inclinación, Protoboard, Resistencia 10K.
+Componentes necesarios: Placa Arduino, LED, Resistencia 220, Sensor de inclinación, Protoboard.
+Según el tipo de sensor de inclinación que se utilice, se necesitar una Resistencia de 10K o no. 
+El sensor KY-020 la trae incorporada, por lo que en este caso la omitiremos.
 
 <img src="imagenes/esquemaSensorInclinacion.png" height="400" width="600"/>
 
@@ -290,8 +292,12 @@ void loop(){
   }
 }
 ```
-
 Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/f49b622d-2a19-43c0-9c28-6eeedb202b93/preview)
+
+### `Alternativa`
+
+En este caso, utilizaremos el sensor de inclinación simple.
+
 
 ### Encuesta del curso
 
