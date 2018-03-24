@@ -118,8 +118,8 @@ Mediante un pin de entrada digital, se conecta un pulsador y una resistencia pul
 int estado = 0; // Declarar una variable tipo Integer (numérica entero, 0, 1, 2, 3).
 
 void setup() {
-    pinMode(8, INPUT)   // Declarar el botón como entrada
-    pinMode(4, OUTPUT)  // Declarar el LED como salida
+    pinMode(8, INPUT);   // Declarar el botón como entrada
+    pinMode(4, OUTPUT);  // Declarar el LED como salida
 }
 
 void loop() {
