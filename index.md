@@ -133,7 +133,7 @@ void loop() {
 ```
 Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/93e95293-c2b8-403e-b50d-0ed53ce50dc3/preview)
 
-### `Mejora de código`
+`Mejora de código`
 
 ```cpp
 int estado = 0;         // Declarar variables
@@ -141,8 +141,8 @@ int estadoAnterior = 0;
 int salida = 0;
 
 void setup() {
-    pinMode(8, INPUT)   // Declarar el botón como entrada
-    pinMode(4, OUTPUT)  // Declarar el LED como salida
+    pinMode(8, INPUT);   // Declarar el botón como entrada
+    pinMode(4, OUTPUT);  // Declarar el LED como salida
 }
 
 void loop() {
@@ -294,7 +294,7 @@ void loop(){
 ```
 Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/f49b622d-2a19-43c0-9c28-6eeedb202b93/preview)
 
-### `Alternativa`
+`Alternativa`
 
 En este caso, utilizaremos el sensor de inclinación simple.
 
