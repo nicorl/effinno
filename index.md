@@ -206,21 +206,40 @@ void setup() {
   pinMode(led1, OUTPUT); //Declara el led 1 como salida
   pinMode(led2, OUTPUT); //Declara el led 2 como salida
   pinMode(led3, OUTPUT); //Declara el led 3 como salida
-  digitalWrite(pin1, LOW); //Apaga el led 1
-  digitalWrite(pin2, LOW); //Apaga el led 2
-  digitalWrite(pin3, LOW); //Apaga el led 3
+  digitalWrite(led1, LOW); //Apaga el led 1
+  digitalWrite(led2, LOW); //Apaga el led 2
+  digitalWrite(led3, LOW); //Apaga el led 3
 }
 
 void loop() {
-  digitalWrite(pin1, HIGH); // Enciende led 1
-  delay(200);               // Espera 200 ms
-  digitalWrite(pin1, LOW);  // Apaga led 1
-  digitalWrite(pin2, HIGH); // Enciende led 2
-  delay(200);               // Espera 200 ms
-  digitalWrite(pin2, LOW);  // Apaga led 2
-  digitalWrite(pin3, HIGH); // Enciende led 3
-  delay(200);               // Espera 200 ms
-  digitalWrite(pin3, LOW);  // Apaga led 3
+  digitalWrite(led3, HIGH); // Enciende led verde
+  delay(5000);               
+  digitalWrite(led3, LOW);  // Apaga led verde
+  delay(200);
+  digitalWrite(led2, HIGH); // Enciende led amarillo
+  delay(2000);              
+  digitalWrite(led2, LOW);  // Apaga led amarillo
+  delay(200);
+  digitalWrite(led2, HIGH); // Enciende led amarillo
+  delay(200);
+  digitalWrite(led2, LOW);  // Apaga led amarillo
+  delay(200);
+  digitalWrite(led2, HIGH); // Enciende led amarillo
+  delay(200);
+  digitalWrite(led2, LOW);  // Apaga led amarillo
+  delay(200);
+  digitalWrite(led2, HIGH); // Enciende led amarillo
+  delay(200);
+  digitalWrite(led2, LOW);  // Apaga led amarillo
+  delay(200);
+  digitalWrite(led2, HIGH); // Enciende led amarillo
+  delay(200);
+  digitalWrite(led2, LOW);  // Apaga led amarillo
+  delay(200);
+  digitalWrite(led1, HIGH); // Enciende led rojo
+  delay(5000);               
+  digitalWrite(led1, LOW);  // Apaga led rojo
+  delay(200);
 }
 
 ```
