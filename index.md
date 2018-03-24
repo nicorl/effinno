@@ -267,7 +267,7 @@ Componentes necesarios: Placa Arduino, LED, Sensor de inclinación, Protoboard, 
 <img src="imagenes/esquemaelectricoSensorInclinacion.png" height="400" width="600"/>
 
 
-```java
+```javascript
 int tiltPin = 2;      // Pin del Tilt Switch
 int ledPin =  12;     // Pin del LED
 int tiltState = 0;    // Variable para el Tilt Switch
