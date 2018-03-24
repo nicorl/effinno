@@ -256,7 +256,37 @@ void loop() {
 
 Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/ee5ebd67-4c3e-41a9-8eef-c0f36c4ed7c6/preview)  
 
-### Lectura de un pulsador
+### Inclinación
+
+**Objetivo**: Encender un LED cuando alcance una determinada inclinación el protoboard.
+
+Componentes necesarios: Placa Arduino, LED, Sensor de inclinación, Protoboard, Resistencia 10K.
+
+```javascript
+int tiltPin = 2;      // Pin del Tilt Switch
+int ledPin =  13;     // Pin del LED
+int tiltState = 0;    // Variable para el Tilt Switch
+
+void setup() {  
+  pinMode(ledPin, OUTPUT);  // Configurar LED como salida     
+  pinMode(tiltPin, INPUT);  // Configurar TS como entrada
+}
+
+void loop(){
+  // Captura el valor del Titl
+  tiltState = digitalRead(tiltPin);
+
+  // Comprueba si tiene inclinación
+  if (tiltState == HIGH) {     
+    digitalWrite(ledPin, HIGH);  
+  } 
+  else {
+    digitalWrite(ledPin, LOW); 
+  }
+}
+```
+
+Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/f49b622d-2a19-43c0-9c28-6eeedb202b93/preview)
 
 ### Encuesta del curso
 
