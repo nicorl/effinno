@@ -173,7 +173,7 @@ void setup() {
 }
 
 void loop() {
-  valor = digitalPin(pinEntrada); // Recoger el valor del pin
+  valor = digitalRead(pinEntrada); // Recoger el valor del pin
   if (valor == HIGH) {            // ¿Es el valor del pin == HIGH == 1 == PRESIONADO?
     digitalWrite(pinLED, LOW);    // Apagar el LED
   } else {
