@@ -78,7 +78,7 @@ Información necesaria: Arduino UNO trae un LED integrado en el pin digital 13.
 
 Ya que los pines digitales pueden ser E/S, en el *setup* hay que declarar que utilizaremos el pin 13 como salida.
 
-```javascript
+```cpp
 void setup() { // Código que se ejecuta una única vez.
   pinMode(13, OUTPUT); // Declaración del pin 13 como salida. // LED_BUILTIN
 }
@@ -114,7 +114,7 @@ Ver pull-up/pull-down
 
 Mediante un pin de entrada digital, se conecta un pulsador y una resistencia pull-down. **Cuando** se presiona el pulsador, el valor del pin es *LOW* (0V), y en caso contrario, *HIGH* (+5V).
 
-```javascript
+```cpp
 int estado = 0; // Declarar una variable tipo Integer (numérica entero, 0, 1, 2, 3).
 
 void setup() {
@@ -135,7 +135,7 @@ Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/93e95293-c
 
 ### `Mejora de código`
 
-```javascript
+```cpp
 int estado = 0;         // Declarar variables
 int estadoAnterior = 0;
 int salida = 0;
@@ -172,7 +172,7 @@ Utilizando el pin 13 como salida, evitamos incluir una resistencia extra ya que 
 
 <img src="imagenes/esquemaelectricoArduino01Alternativa.png" height="400" width="600"/>
 
-```javascript
+```cpp
 int pinLED = 13;              // Crear variable para asignar el Pin del LED
 int pinEntrada = 5;           // Crear variable para asignar el Pin del botón
 int valor = 0;                // Variable para leer el estado del Pin
@@ -207,7 +207,7 @@ Componentes necesarios: Placa Arduino, 3 LEDs, 3 resistencias y protoboard.
 
 <img src="imagenes/esquemaelectricoSecuencia3LEDs.png" height="400" width="600"/>
 
-```javascript
+```cpp
 int led1 = 6; //Define la salida del led 1 (salida 6)
 int led2 = 7; //Define la salida del led 2 (salida 7)
 int led3 = 8; //Define la salida del led 3 (salida 8)
@@ -267,7 +267,7 @@ Componentes necesarios: Placa Arduino, LED, Sensor de inclinación, Protoboard, 
 <img src="imagenes/esquemaelectricoSensorInclinacion.png" height="400" width="600"/>
 
 
-```javascript
+```cpp
 int tiltPin = 2;      // Pin del Tilt Switch
 int ledPin =  12;     // Pin del LED
 int tiltState = 0;    // Variable para el Tilt Switch
