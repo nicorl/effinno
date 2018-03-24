@@ -96,13 +96,23 @@ Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/479d5c08-8
 
 **Objetivo**: encender y apagar el LED mediante un botón.
 
-Componentes necesarios: Placa Arduino, LED, 2 resistencias, Botón y Protoboard.
+Componentes necesarios: Placa Arduino, LED, 2 resistencias (1x220 y 1x10K), Botón y Protoboard.
 
 El LED tiene polaridad, por lo que se conecta de una manera concreta. El extremo plano (el cátodo, la parte negativa) va a tierra y le conectaremos ahí una resistencia. El lado positivo (el ánodo) lo conectaremos directamente a un pin digital.
+
+**Pulsadores**: Su función es conectar dos puntos de un circuito cuando es presionado y se puede generar una señal de tensión utilizando un divisor de tensión.
 
 <img src="imagenes/esquemaArduino01.png" height="400" width="600"/>
 
 <img src="imagenes/esquemaelectricoArduino01.png" height="400" width="600"/>
+
+**¿Por qué necesita una resistencia el pulsador?**
+
+Ver pull-up/pull-down
+
+**¿Cómo se utiliza?**
+
+Mediante un pin de entrada digital, se conecta un pulsador y una resistencia pull-down. **Cuando** se presiona el pulsador, el valor del pin es *LOW* (0V), y en caso contrario, *HIGH* (+5V).
 
 ```javascript
 int estado = 0; // Declarar una variable tipo Integer (numérica entero, 0, 1, 2, 3).
