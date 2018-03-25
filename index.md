@@ -371,6 +371,7 @@ void loop()
 ```
 
 Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/cd144b08-8ede-4231-ae79-71e2d71a5fda/preview)
+
 Si te da problemas: [aquí](https://create.arduino.cc/editor/nicorl/63e9185d-4f0a-4360-ad00-57b4869df26b/preview)
 
 
