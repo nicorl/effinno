@@ -296,8 +296,60 @@ Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/f49b622d-2
 
 `Alternativa`
 
-En este caso, utilizaremos el sensor de inclinación simple.
+En este caso, utilizaremos el sensor de inclinación simple SW-520D.
 
+En este caso, el sensor necesita una resistencia de 10K, que el sensor YK-020 trae incorporada, por lo tanto el esquema cambia.
+
+<img src="imagenes/esquemaSensorInclinacionOpcion2.png" height="400" width="600"/>
+
+<img src="imagenes/esquemaelectricoSensorInclinacionOpcion2.png" height="400" width="600"/>
+
+```cpp
+int Pindelsensor = 2; // Pin al que enchufamos el sensor de inclinación
+int PindelLED = 13; // Pin al que enchufamos el LED.
+
+int EstadodelLED = HIGH; // Estado original del LED.
+int lectura;             // Variable para sobreescribir el valor según la inclinación
+int Estadoprevio = LOW; // Estado anterior del LED.
+
+long Tiempo = 0;        // Variable  
+long Rebote = 50;       // Variable
+
+void setup()
+{
+  pinMode(Pindelsensor, INPUT); // Establecer el sensor como entrada.
+  digitalWrite(Pindelsensor, HIGH); // Establecer el valor HIGH para el sensor de entrada
+  pinMode(PindelLED, OUTPUT); // Establecer el LED como salida.
+}
+
+void loop()
+{
+  int EstadodeInclinacion; // Definir variable de estado de inclinación
+
+  lectura = digitalRead(Pindelsensor); // Asignar el valor de la inclinación a la variable lectura
+  
+  if (lectura != Estadoprevio) {  // SI el valor de lectura es DIFERENTE al de Estadoprevio
+
+      Tiempo = millis(); // Asignar a la variable tiempo el tiempo en milisegundos.
+  }
+
+  if ((millis() - Tiempo) > Rebote) { // Si: La diferencia de millis() y tiempo es MAYOR que el tiempo asignado en Rebote:
+      Estadodeinclinacion = lectura;  // Asigna a Estadodeinclinacion el valor de lectura.
+      
+      if (EstadodeInclinacion == HIGH) { // Si: EstadodeInclinacion está en HIGH 
+        EstadodelLED = LOW;              // El estado del LED lo pasamos a LOW.
+      } else {
+        EstadodelLED = HIGH;             // En otro caso, lo pasamos a HIGH
+      }
+      
+      digitalWrite(PindelLED, EstadodelLED);  // Al LED le pasamos el valor del estado, conseguido mediante el IF anterior.
+     
+      Estadoanterior = lectura;         // Pasamos el valor de lectura a la variable Estadoanterior
+  }
+
+```
+
+Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/cd144b08-8ede-4231-ae79-71e2d71a5fda/preview)
 
 ### Encuesta del curso
 
