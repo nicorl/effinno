@@ -304,21 +304,42 @@ En este caso, el sensor necesita una resistencia de 10K, que el sensor YK-020 tr
 
 <img src="imagenes/esquemaelectricoSensorInclinacionOpcion2.png" height="400" width="600"/>
 
+`Explicación`
+
+Previo `setup()`, definiremos variables para asignar los pines del sensor y del LED. 
+
+En `setup()`, estableceremos el pin del sensor como entrada, el del LED como salida y le daremos un valor al pin del sensor _HIGH_.
+
+Desde `loop()` necesitamos: 
+
+A) Leer constantemente el valor del sensor,
+
+B) Comprobar si la lectura del sensor es _HIGH_ o _LOW_, y 
+
+C) Enviar esa información al LED.
+
+Para leer constantemente el valor del sensor, crearemos una variable más en la cabecera del programa, llamada lectura. Esa variable recogerá en cada `loop` el valor del sensor.
+
+Esa lectura, debe ser comparada contra algún valor (_HIGH_ o _LOW_), para que, en función de ello, encienda o apague el LED. Para ello, dentro del `loop` creamos una varible nueva, a la que le asignaremos el valor de la lectura del sensor: `EstadodeInclinacion`.
+
+Independientemente de si `EstadodeInclinacion` es _HIGH_ o es _LOW_, buscaremos enviar al LED un valor para que se cambie con la inclinación. Para ello, creamos en la cabecera del programa la variable `EstadodelLED` y mediante un estamento IF, dentro del `loop`, le asignaremos valor _HIGH_ o _LOW_, según nos interese. Posteriormente, al `PindelLED` le enviaremos el `EstadodelLED`. 
+
+
 ```cpp
 int Pindelsensor = 2; // Pin al que enchufamos el sensor de inclinación
 int PindelLED = 13; // Pin al que enchufamos el LED.
+int lectura; // Variable para sobreescribir el valor según la inclinación
 
 int EstadodelLED = HIGH; // Estado original del LED.
-int lectura;             // Variable para sobreescribir el valor según la inclinación
-int Estadoprevio = LOW; // Estado anterior del LED.
+int EstadoprevioLED = LOW; // Estado anterior del LED.
 
-long Tiempo = 0;        // Variable  
-long Rebote = 50;       // Variable
+long Tiempo = 0;        // Variable que servirá para evitar que cambie constantemente el LED
+long Rebote = 50;      // Variable que servirá para evitar que cambie constantemente el LED
 
 void setup()
 {
   pinMode(Pindelsensor, INPUT); // Establecer el sensor como entrada.
-  digitalWrite(Pindelsensor, HIGH); // Establecer el valor HIGH para el sensor de entrada
+  digitalWrite(Pindelsensor, HIGH); // Establecer el valor HIGH para el sensor de entrada.
   pinMode(PindelLED, OUTPUT); // Establecer el LED como salida.
 }
 
@@ -328,28 +349,31 @@ void loop()
 
   lectura = digitalRead(Pindelsensor); // Asignar el valor de la inclinación a la variable lectura
   
-  if (lectura != Estadoprevio) {  // SI el valor de lectura es DIFERENTE al de Estadoprevio
+  if (lectura != EstadoprevioLED) {  // SI el valor de lectura es DIFERENTE al de Estadoprevio
 
       Tiempo = millis(); // Asignar a la variable tiempo el tiempo en milisegundos.
   }
 
   if ((millis() - Tiempo) > Rebote) { // Si: La diferencia de millis() y tiempo es MAYOR que el tiempo asignado en Rebote:
-      Estadodeinclinacion = lectura;  // Asigna a Estadodeinclinacion el valor de lectura.
+      EstadodeInclinacion = lectura;  // Asigna a Estadodeinclinacion el valor de lectura.
       
-      if (EstadodeInclinacion == HIGH) { // Si: EstadodeInclinacion está en HIGH 
+      if (EstadodeInclinacion == HIGH) // Si: EstadodeInclinacion está en HIGH 
         EstadodelLED = LOW;              // El estado del LED lo pasamos a LOW.
-      } else {
+      else
         EstadodelLED = HIGH;             // En otro caso, lo pasamos a HIGH
       }
       
       digitalWrite(PindelLED, EstadodelLED);  // Al LED le pasamos el valor del estado, conseguido mediante el IF anterior.
      
-      Estadoanterior = lectura;         // Pasamos el valor de lectura a la variable Estadoanterior
+      EstadoprevioLED = lectura;         // Pasamos el valor de lectura a la variable Estadoanterior
   }
 
 ```
 
 Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/cd144b08-8ede-4231-ae79-71e2d71a5fda/preview)
+Si te da problemas: [aquí](https://create.arduino.cc/editor/nicorl/63e9185d-4f0a-4360-ad00-57b4869df26b/preview)
+
+
 
 ### Encuesta del curso
 
