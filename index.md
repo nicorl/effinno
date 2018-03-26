@@ -310,7 +310,6 @@ Previo `setup()`, definiremos variables para asignar los pines del sensor y del 
 
 En `setup()`, estableceremos el pin del sensor como entrada, el del LED como salida y le daremos un valor al pin del sensor _HIGH_. [+ info](https://github.com/nicorl/effinno/wiki/Sensores-de-inclinaci%C3%B3n)
 
-
 Desde `loop()` necesitamos: 
 
 A) Leer constantemente el valor del sensor,
@@ -319,12 +318,42 @@ B) Comprobar si la lectura del sensor es _HIGH_ o _LOW_, y
 
 C) Enviar esa información al LED.
 
-Para leer constantemente el valor del sensor, crearemos una variable más en la cabecera del programa, llamada lectura. Esa variable recogerá en cada `loop` el valor del sensor.
+A) Para leer constantemente el valor del sensor crearemos una variable más en la cabecera del programa llamada **lectura**. Esa variable recogerá en cada `loop` el valor del sensor.
 
-Esa lectura, debe ser comparada contra algún valor (_HIGH_ o _LOW_), para que, en función de ello, encienda o apague el LED. Para ello, dentro del `loop` creamos una varible nueva, a la que le asignaremos el valor de la lectura del sensor: `EstadodeInclinacion`.
+B) Esa **lectura** recogida (_HIGH_ o _LOW_) se **compara** contra el estado anterior del sensor (_HIGH_ o _LOW_ también), para que en función de su valor, encienda o apague el LED. 
 
-Independientemente de si `EstadodeInclinacion` es _HIGH_ o es _LOW_, buscaremos enviar al LED un valor para que se cambie con la inclinación. Para ello, creamos en la cabecera del programa la variable `EstadodelLED` y mediante un estamento IF, dentro del `loop`, le asignaremos valor _HIGH_ o _LOW_, según nos interese. Posteriormente, al `PindelLED` le enviaremos el `EstadodelLED`. 
+##### Primera aproximación
 
+```cpp
+int Pindelsensor = 2;                             // Pin al que enchufamos el sensor de inclinación
+int PindelLED = 13;                               // Pin al que enchufamos el LED.
+int lectura;                                      // Variable para sobreescribir el valor según la inclinación
+
+void setup()
+{
+  pinMode(Pindelsensor, INPUT);                   // Establecer el sensor como entrada.
+  digitalWrite(Pindelsensor, HIGH);               // Establecer el valor HIGH para el sensor de entrada.
+  pinMode(PindelLED, OUTPUT);                     // Establecer el LED como salida.
+}
+
+void loop()
+{
+  lectura = digitalRead(Pindelsensor);            // Asignar el valor de la inclinación a la variable lectura
+        
+     if (lectura == HIGH) {                       // Si: EstadodeInclinacion está en HIGH 
+        digitalWrite(PindelLED, LOW);             // El estado del LED lo pasamos a LOW.
+     }
+     else {
+        digitalWrite(PindelLED, HIGH);            // Si lectura == LOW, lo pasamos a HIGH.
+     }
+}
+
+```
+Descarga la versión más básica [aquí](https://create.arduino.cc/editor/nicorl/5c78ce83-83d5-43b4-bb2f-931fd718e3ad/preview)
+
+También puedes descargar la versión que incluye un IF [aquí](https://create.arduino.cc/editor/nicorl/0cf02dce-fa74-4a2b-8013-5cda62a0b842/preview)
+
+Otra opción que tiene en cuenta el rebote:
 
 ```cpp
 int Pindelsensor = 2; // Pin al que enchufamos el sensor de inclinación
