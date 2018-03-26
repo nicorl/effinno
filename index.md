@@ -304,11 +304,12 @@ En este caso, el sensor necesita una resistencia de 10K, que el sensor YK-020 tr
 
 <img src="imagenes/esquemaelectricoSensorInclinacionOpcion2.png" height="400" width="600"/>
 
-`Explicación`
+#### Explicación
 
 Previo `setup()`, definiremos variables para asignar los pines del sensor y del LED. 
 
-En `setup()`, estableceremos el pin del sensor como entrada, el del LED como salida y le daremos un valor al pin del sensor _HIGH_.
+En `setup()`, estableceremos el pin del sensor como entrada, el del LED como salida y le daremos un valor al pin del sensor _HIGH_. [+ info](https://github.com/nicorl/effinno/wiki/Sensores-de-inclinaci%C3%B3n)
+
 
 Desde `loop()` necesitamos: 
 
