@@ -108,7 +108,7 @@ El LED tiene polaridad, por lo que se conecta de una manera concreta. El extremo
 
 **¿Por qué necesita una resistencia el pulsador?**
 
-Ver pull-up/pull-down
+Ver la [wiki > pull-up/pull-down](https://github.com/nicorl/effinno/wiki/Resistencia-pull-up---pull-down-arduino)
 
 **¿Cómo se utiliza?**
 
