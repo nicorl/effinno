@@ -410,7 +410,7 @@ Si te da problemas: [aquí](https://create.arduino.cc/editor/nicorl/63e9185d-4f0
 
 El potenciómetro se compone de una resistencia sobre la que se desplaza un contacto, que la divide eléctricamente. El movimiento del cursor origina un cambio en la resistencia medida entre el terminal central y cualquiera de los extremos.
 
-<img src="imagenes/Potenciometro/EsquemaPotenciometro.png" height="295" width="171"/>
+<img src="imagenes/Potenciometro/EsquemaPotenciometro.png" height="295" width="271"/>
 
 Este cambio de resistencia puede utilizarse para medir desplazamientos lineales o angulares de una pieza acoplada al cursor.
 
