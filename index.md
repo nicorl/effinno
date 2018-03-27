@@ -414,6 +414,9 @@ El potenciómetro se compone de una resistencia sobre la que se desplaza un cont
 
 Este cambio de resistencia puede utilizarse para medir desplazamientos lineales o angulares de una pieza acoplada al cursor.
 
+<img src="imagenes/esquemaPotenciometro.png" height="400" width="600"/>
+
+<img src="imagenes/esquemaelectricoPotenciometro.png" height="400" width="600"/>
 
 
 ### Encuesta del curso
