@@ -460,6 +460,52 @@ void loop() {
 ```
 Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/347e6fa1-d45f-45c8-83e2-013288a21796/preview)
 
+### Utilizando arrays
+
+Los arrays nos permiten organizar los datos de manera que a través de rutinas como **for**, recorramos todas las posiciones, economizando código y ganando legibilidad en el código.
+
+Objetivo: Conectar un número `N` de LEDs que se encenderán y apagarán siguiendo una secuencia como si fuesen una línea.
+
+**Definición de variables**
+
+Sin optimizar:
+```cpp
+int pin2: 2;
+int pin3: 3;
+int pin4: 4;
+int pin5: 5;
+int pin6: 6;
+int pin7: 7;
+int pin8: 8;
+```
+
+Bajo array: 
+```cpp
+int pinArray[]: {2,3,4,5,6,7,8};
+cuenta = 0;
+```
+
+**setup**
+
+Sin optimizar:
+```cpp
+pinMode(pin2, OUTPUT);
+pinMode(pin3, OUTPUT);
+pinMode(pin4, OUTPUT);
+pinMode(pin5, OUTPUT);
+pinMode(pin6, OUTPUT);
+pinMode(pin7, OUTPUT);
+pinMode(pin8, OUTPUT);
+```
+
+Bajo array, necesitará que se defina la variable *cuenta*:
+```cpp
+for (cuenta = 0; cuenta < 7; cuenta ++){
+  pinMode(pinArray[cuenta],OUTPUT);
+}
+```
+
+
 ### Encuesta del curso
 
 [Encuesta](https://docs.google.com/forms/d/18nUbC7JfNeWw9XNoktKNvuYjwp0l7hzUayIeoaZf28Y)
