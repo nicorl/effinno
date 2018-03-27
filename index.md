@@ -404,6 +404,16 @@ Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/cd144b08-8ed
 
 Si te da problemas: [aquí](https://create.arduino.cc/editor/nicorl/63e9185d-4f0a-4360-ad00-57b4869df26b/preview)
 
+### Potenciómetro
+
+**¿Cómo funciona?** 
+
+El potenciómetro se compone de una resistencia sobre la que se desplaza un contacto, que la divide eléctricamente. El movimiento del cursor origina un cambio en la resistencia medida entre el terminal central y cualquiera de los extremos.
+
+<img src="imagenes/Potenciometro/EsquemaPotenciometro.png" height="295" width="171"/>
+
+Este cambio de resistencia puede utilizarse para medir desplazamientos lineales o angulares de una pieza acoplada al cursor.
+
 
 
 ### Encuesta del curso
