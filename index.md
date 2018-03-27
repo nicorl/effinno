@@ -436,7 +436,29 @@ void loop() {
 }
 
 ```
+
 Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/68961432-52fc-4859-b5e1-fb51fac1df39/preview)
+
+
+#### Potenciómetro 2.0
+
+Con el objetivo de trasladar datos hasta el sistema, trabajaremos con nuevas funciones que envíen el valor del sensor.
+
+```cpp
+void setup() {
+  // Inicializar comunicación serial a 9600 bits por segundo:
+  Serial.begin(9600);
+}
+ 
+void loop() {
+  // Lee el pin analogico 2:
+  int ValordelSensor = analogRead(A2);
+  // Devuelve el valor:
+  Serial.println(ValordelSensor);
+  delay(1000);        // Retraso entre lecturas
+}
+```
+Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/347e6fa1-d45f-45c8-83e2-013288a21796/preview)
 
 ### Encuesta del curso
 
