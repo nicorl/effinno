@@ -418,6 +418,25 @@ Este cambio de resistencia puede utilizarse para medir desplazamientos lineales 
 
 <img src="imagenes/esquemaelectricoPotenciometro.png" height="400" width="600"/>
 
+```cpp
+
+int PinPotenciometro = 2; // Seleccionar el pin analógico para el potenciómetro
+int PinLED = 13; // Seleccionar el pin de salida digital para el LED
+int valordelsensor; // Variable para recoger el valor captado por el sensor.
+
+void setup() {
+  pinMode(PinLED, OUTPUT); // Declara el PinLED como salida.
+}
+void loop() {
+  valordelsensor = analogRead(PinPotenciometro); // Captar el valor del sensor
+  digitalWrite(PinLED, HIGH); // Enciende LED
+  delay(valordelsensor); // Detiene el programa por un tiempo igual a valordelsensor
+  digitalWrite(PinLED, LOW); // Apaga LED
+  delay(valordelsensor); // Detiene el programa por un tiempo igual a valordelsensor
+}
+
+```
+Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/68961432-52fc-4859-b5e1-fb51fac1df39/preview)
 
 ### Encuesta del curso
 
