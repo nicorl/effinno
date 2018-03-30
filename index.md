@@ -543,6 +543,12 @@ Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/c1264a80-8
 
 Código más avanzado para hacer una estela [aquí](https://create.arduino.cc/editor/nicorl/b15c2f5f-78c2-4c2b-bc8b-cb51a72a5c4d/preview)  
 
+### Termostato
+
+**Objetivo**: Capturar la temperatura ambiente mediante el sensor DHT11.
+
+
+
 ### Encuesta del curso
 
 [Encuesta](https://docs.google.com/forms/d/18nUbC7JfNeWw9XNoktKNvuYjwp0l7hzUayIeoaZf28Y)
