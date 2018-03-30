@@ -504,7 +504,11 @@ for (cuenta = 0; cuenta < 7; cuenta ++){
   pinMode(pinArray[cuenta],OUTPUT);
 }
 ```
-**Objetivo**: Encender y apagar LEDs siguiendo una secuencia como la del coche fantástico.
+**Esquemas**
+
+<img src="imagenes/esquemaCF.png" height="400" width="600"/>
+
+<img src="imagenes/esquemaelectricoCF.png" height="400" width="600"/>
 
 ```cpp
 // definir los pines donde hay LEDs
@@ -537,9 +541,6 @@ void loop() {
 
 Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/c1264a80-83c4-4a5c-8cd5-8d7bb765cb44/preview)
 
-<img src="imagenes/esquemaCF.png" height="400" width="600"/>
-
-<img src="imagenes/esquemaelectricoCF.png" height="400" width="600"/>
 
 ### Encuesta del curso
 
