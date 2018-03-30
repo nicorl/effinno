@@ -537,7 +537,9 @@ void loop() {
 
 Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/c1264a80-83c4-4a5c-8cd5-8d7bb765cb44/preview)
 
+<img src="imagenes/esquemaCF.png" height="400" width="600"/>
 
+<img src="imagenes/esquemaelectricoCF.png" height="400" width="600"/>
 
 ### Encuesta del curso
 
