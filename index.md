@@ -482,7 +482,7 @@ int pin8: 8;
 Bajo array: 
 ```cpp
 int pinArray[]: {2,3,4,5,6,7,8};
-cuenta = 0;
+int cuenta = 0;
 ```
 
 **setup**
@@ -504,6 +504,39 @@ for (cuenta = 0; cuenta < 7; cuenta ++){
   pinMode(pinArray[cuenta],OUTPUT);
 }
 ```
+**Objetivo**: Encender y apagar LEDs siguiendo una secuencia como la del coche fantástico.
+
+```cpp
+// definir los pines donde hay LEDs
+int pinArray[]: {2,3,4,5,6,7,8};
+int cuenta = 0;
+int tiempoentreONOFF = 150; // 150 ms!
+
+void setup() {
+  for (cuenta = 0; cuenta < 7; cuenta++) {
+    pinMode(pinArray[cuenta], OUTPUT);    // Bucle para configurar los pines de LED como salida.
+  }
+}
+
+void loop() {
+  for (cuenta = 0; cuenta < 7; cuenta++) {  // Encendido y apagado de 2 a 8
+    digitalWrite(pinArray[cuenta],HIGH); // Enciende led en posicion CUENTA de pinArray
+    delay(tiempoentreONOFF);
+    digitalWrite(pinArray[cuenta],LOW); // Apagar el led en posicion CUENTA de pinArray
+    delay(tiempoentreONOFF);
+  }
+  
+  for (cuenta = 6; cuenta>=0; cuenta--) { // Encendido y apagado de 8 a 2
+    digitalWrite(pinArray[cuenta],HIGH);
+    delay(tiempoentreONOFF);
+    digitalWrite(pinArray[cuenta],LOW);
+    delay(tiempoentreonOFF);
+  }
+}
+```
+
+Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/c1264a80-83c4-4a5c-8cd5-8d7bb765cb44/preview)
+
 
 
 ### Encuesta del curso
