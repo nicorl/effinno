@@ -545,9 +545,37 @@ Código más avanzado para hacer una estela [aquí](https://create.arduino.cc/ed
 
 ### Termostato
 
-**Objetivo**: Capturar la temperatura ambiente mediante el sensor DHT11.
+**Objetivo**: Capturar la temperatura y humedad ambiente mediante el sensor DHT11 (KY-015). Info general en la [Wiki](https://github.com/nicorl/effinno/wiki/Sensor-DHT11).
 
+<img src="imagenes/esquemaSensorTempyHumedad.png" height="400" width="600"/>
 
+<img src="imagenes/esquemaelectricoSensorTempyHumedad.png" height="400" width="600"/>
+
+Los esquemas son simples en su conexión. Se complica teniendo que introducir una resistencia de 4.7 si utilizamos un NTC básico. 
+
+En esta ocasión, lo interesante es que tenemos que añadir una librería externa para poder utilizar el sensor.
+
+```cppp
+#include <dht.h>
+
+dht DHT;
+
+#define DHT11_PIN 2  // Aquí ponemos el número del PIN que está conectado al sensor.
+
+void setup(){
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int chk = DHT.read11(DHT11_PIN);
+  Serial.print("Temperatura = ");
+  Serial.println(DHT.temperature);
+  Serial.print("Humedad = ");
+  Serial.println(DHT.humidity);
+  delay(1000);
+}
+```
 
 ### Encuesta del curso
 
