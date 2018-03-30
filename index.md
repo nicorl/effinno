@@ -541,6 +541,7 @@ void loop() {
 
 Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/c1264a80-83c4-4a5c-8cd5-8d7bb765cb44/preview)
 
+Código más avanzado para hacer una estela [aquí](https://create.arduino.cc/editor/nicorl/b15c2f5f-78c2-4c2b-bc8b-cb51a72a5c4d/preview)  
 
 ### Encuesta del curso
 
