@@ -662,12 +662,12 @@ int contador = 0;
 void setup() {
   pinMode(PinLED, OUTPUT);
   pinMode(PiezoElectrico, OUTPUT);
-  beginSerial(9600);
+  Serial.begin(9600);
 }
 
 void loop(){
   digitalWrite(PiezoElectrico, LOW);
-  serByte = serialRead();
+  serByte = serial.Read();
   if (serByte != -1) {
     val = serByte;
     printByte(val);
