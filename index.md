@@ -626,6 +626,8 @@ Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/6dfbd3b4-87f
 
 ### Tonos
 
+<img src="imagenes/esquemaZumbadorKY-006.png" height="400" width="600"/>
+
 #### Basico 1
 
 ```cpp
