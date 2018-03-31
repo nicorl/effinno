@@ -579,6 +579,51 @@ void loop()
 
 Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/19efbc38-7535-4f0b-851e-885fe278f36d/preview)
 
+### Sensor de fuerza 
+
+**Objetivo**: Medir la presión y obtener un valor analógico.
+
+Convertimos un zumbador piezoeléctrico en un sensor de presión a través de un pin de entrada analógica.
+
+<img src="imagenes/esquemaPiezoelectrico.png" height="400" width="600"/>
+
+<img src="imagenes/esquemaelectricoPiezoelectrico.png" height="400" width="600"/>
+
+
+```cpp
+int PinLED = 13;
+int PinPiezo = 2;
+
+int Limite = 1; // Valor mínimo para que se encienda el pin 13.
+
+int val = 0; // Valor que lamacena el valor leído por el sensor
+int t = 0; // Valor del intervalo de medida.
+
+void setup() {
+  pinMode(PinLED, OUTPUT);
+  Serial.begin(19200);
+  Serial.println("listo");
+}
+
+void loop() {
+  digitalWrite(PinLED, LOW);
+  
+  val = analogRead(PinLED);
+  if (val > Limite) {
+    digitalWrite(PinLED, HIGH);
+    t = 0;
+    while(analogRead(PinPiezo) > Limite) {
+      t++;
+    }
+    if (t>100) {
+      Serial.print("Toc!");
+    }
+  }
+}
+```
+
+Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/6dfbd3b4-87fb-455a-beef-159346fec9a1/preview)
+
 ### Encuesta del curso
 
 [Encuesta](https://docs.google.com/forms/d/18nUbC7JfNeWw9XNoktKNvuYjwp0l7hzUayIeoaZf28Y)
