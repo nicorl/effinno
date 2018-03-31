@@ -585,9 +585,9 @@ Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/19efbc38-753
 
 Convertimos un zumbador piezoeléctrico en un sensor de presión a través de un pin de entrada analógica.
 
-<img src="imagenes/esquemaPiezoelectrico.png" height="200" width="300"/>
+<img src="imagenes/esquemaPiezoelectrico.png" height="400" width="600"/>
 
-<img src="imagenes/esquemaelectricoPiezoelectrico.png" height="300" width="250"/>
+<img src="imagenes/esquemaelectricoPiezoelectrico.png" height="400" width="600"/>
 
 
 ```cpp
