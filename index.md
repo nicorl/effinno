@@ -624,7 +624,13 @@ void loop() {
 
 Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/6dfbd3b4-87fb-455a-beef-159346fec9a1/preview)
 
-### Tonos
+### Tonos con buzzer pasivo
+
+Mediante un buzzer (zumbador) pasivo podemos generar tonos de diferentes frecuencias. Actualmente existe una función que permite la reproducción automática:
+
+```cpp
+tone(PIN_BUZZER, FRECUENCIA, DURACION);
+```
 
 <img src="imagenes/esquemaZumbadorKY-006.png" height="400" width="600"/>
 
