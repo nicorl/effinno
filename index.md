@@ -626,6 +626,65 @@ Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/6dfbd3b4-87f
 
 ### Tonos
 
+#### Basico 1
+
+```cpp
+int zumbador = 8; // Asigna el zumbador al pin digital 8
+
+void setup() {
+	pinMode(zumbador, OUTPUT); // Establecer pin 8 como salida.
+}
+
+void loop() {
+	for (int i = 0; i < 80; i++) {  // Hace un sonido
+		digitalWrite(zumbador, HIGH); // Envia señal alta al zumbador
+		delay(1); // delay 1ms
+		digitalWrite(zumbador, LOW); // Envia señal baja al zumbador
+		delay(1);
+	}
+	delay(50);
+	for (int j = 0; j < 100; j++) { // Hace otro sonido
+		digitalWrite(zumbador, HIGH);
+		delay(2); // delay 2ms
+		digitalWrite(zumbador, LOW);
+		delay(2);
+	}
+	delay(100);
+}
+```
+
+Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/d39f5668-a985-482f-9ac7-8096a9da3bb8/preview)
+
+#### Basico 2
+
+```cpp
+void setup() {
+  pinMode(4, OUTPUT); // Fija pin 4 para zumbador
+}
+
+void loop() {
+  buzz(4, 2500, 500); // Funcion Buzz en pin 4 a 2500Hz cada 500 ms
+  delay(1000); // Espera entre pitidos
+}
+
+
+void buzz(int targetPin, long frequency, long length) {
+  long delayValue = 1000000/frequency/2; 
+  long numCycles = frequency * length/ 1000;
+ for (long i=0; i < numCycles; i++){
+    digitalWrite(targetPin,HIGH);
+    delayMicroseconds(delayValue); 
+    digitalWrite(targetPin,LOW); 
+    delayMicroseconds(delayValue);
+  }
+}
+```
+
+Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/99767e80-7a82-42a2-9ad3-5d1758720810/preview)
+
+
+#### Avanzado
+
 Aprovechando la capacidad que tiene el procesador para producri señales PWM, utilizaremos el piezo eléctrico para reproducir tonos. 
 La capacidad del piezo eléctrico permite tanto reproducir como detectar tonos. 
 Los tonos se pueden generar desde cualquier programa que permita enviar valores ASCII.
