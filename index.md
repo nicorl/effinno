@@ -624,6 +624,73 @@ void loop() {
 
 Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/6dfbd3b4-87fb-455a-beef-159346fec9a1/preview)
 
+### Tonos
+
+Aprovechando la capacidad que tiene el procesador para producri señales PWM, utilizaremos el piezo eléctrico para reproducir tonos. 
+La capacidad del piezo eléctrico permite tanto reproducir como detectar tonos. 
+Los tonos se pueden generar desde cualquier programa que permita enviar valores ASCII.
+
+<img src="imagenes/esquemaTonos.png" height="400" width="400"/>
+
+La fórmula para conseguir el PW (pulsoAlto) es:
+
+```
+pulsoAlto = 1/(2 * frecuenciaTono) = periodo / 2
+```
+
+| Tecla  | Frecuencia | Periodo | PW (pulsoAlto) |
+| ------ | ---------- | ------- | -------------- |
+| c | 261 Hz | 3830 | 1915 |
+| d | 294 Hz | 3400 | 1700 |
+| e | 329 Hz | 3038 | 1519 |
+| f | 349 Hz | 2864 | 1432 |
+| g | 392 Hz | 2550 | 1275 |
+| a | 440 Hz | 2272 | 1136 |
+| b | 493 Hz | 2028 | 1014 |
+| C | 523 Hz | 1912 | 956 |
+
+```
+int PinLED = 13;
+int PiezoElectrico = 9;
+byte letras[] = {'c','d','e','f','g','a','b','C'};
+int tonos[] = {1915, 1700, 1519, 1432, 1275, 1136, 1014, 956};
+byte val = 0;
+int serByte = -1;
+int EstadoPin = LOW;
+int contador = 0;
+
+void setup() {
+  pinMode(PinLED, OUTPUT);
+  pinMode(PiezoElectrico, OUTPUT);
+  beginSerial(9600);
+}
+
+void loop(){
+  digitalWrite(PiezoElectrico, LOW);
+  serByte = serialRead();
+  if (serByte != -1) {
+    val = serByte;
+    printByte(val);
+    EstadoPin = !EstadoPin;
+    digitalWrite(PinLED, EstadoPin);
+  }
+  for (contador = 0; contador <=8, contador++) {
+    if (letras[contador] == val) {
+      digitalWrite(PiezoElectrico, HIGH);
+      delayMicroseconds(letras[contador]);
+      digitalWrite(PiezoElectrico, LOW);
+      delayMicroseconds(letras[contador]);
+    }
+    else
+      digitalWrite(PiezoElectrico, LOW);
+  }
+}
+
+```
+
+Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/3bacbb21-db52-45a1-bad6-3c1498ec3960/preview)
+
+
 ### Encuesta del curso
 
 [Encuesta](https://docs.google.com/forms/d/18nUbC7JfNeWw9XNoktKNvuYjwp0l7hzUayIeoaZf28Y)
