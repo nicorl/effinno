@@ -649,7 +649,7 @@ pulsoAlto = 1/(2 * frecuenciaTono) = periodo / 2
 | b | 493 Hz | 2028 | 1014 |
 | C | 523 Hz | 1912 | 956 |
 
-```
+```cpp
 int PinLED = 13;
 int PiezoElectrico = 9;
 byte letras[] = {'c','d','e','f','g','a','b','C'};
