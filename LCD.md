@@ -43,6 +43,13 @@ Descarga la librería [aquí](https://www.arduino.cc/en/Reference/LiquidCrystal)
 
 – clear(): Limpia la pantalla LCD y posiciona el cursor en la parte superior izquierda.
 
+<img src="imagenes/esquemaLCD.png" height="400" width="600"/>
+
+<img src="imagenes/esquemaelectricoLCD.png" height="400" width="600"/>
+
+<img src="imagenes/caracteresLCD.png" height="400" width="600"/>
+
+#### Código
 
 ```cpp
 /*
@@ -79,5 +86,104 @@ void loop()
   delay(2000);
  
   lcd.clear(); //Borramos lo que pone a la pantalla
+}
+```
+
+### Creando tu propia imagen
+
+Cada una de las ocho líneas del carácter es 1 byte. Por lo tanto, para crear un carácter tenemos que usar 8 bytes. Para entender esto, vamos a crear el siguiente carácter:
+
+<img src="imagenes/caracter-byte-LCD.png" height="400" width="600"/>
+
+```cpp
+byte caracter[8] = {
+    B00100,
+    B11111,
+    B10101,
+    B00100,
+    B00100,
+    B10101,
+    B01110,
+    B00100
+  };
+```
+
+Luego, a través de la función creatChar() de la librería LiquidCrystal se crea el carácter con los 8 bytes del array. Y finalmente, a través de la función write() se escribe el carácter en el display.
+
+Vamos a hacer un ejemplo para entenderlo mejor. Crearemos un carácter móvil, que se irá moviendo constantemente. Haremos una cara que vaya cambiando su expresión de alegre, normal y enfadado. Cada uno de estos tres estados de expresión será un carácter que crearemos. El código sería el siguiente:
+
+```cpp
+/*
+  www.diymakers.es
+  by A.García
+  17/08/14
+  Aprender a usar un Display LCD
+  Tutorial en: http://diymakers.es/aprender-usar-un-display-lcd/
+*/
+ 
+#include <LiquidCrystal.h> //Importamos la librería LiquidCrystal
+ 
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2); //Creamos la variable y establecemos los pins del display
+ 
+//Creamos los 3 arrays de 8 bytes de los 3 caracteres
+byte alegre[8] = {
+    B00000,
+    B00000,
+    B01010,
+    B00000,
+    B10001,
+    B01110,
+    B00000,
+    B00000
+  };
+ 
+byte normal[8] = {
+    B00000,
+    B00000,
+    B01010,
+    B00000,
+    B00000,
+    B11111,
+    B00000,
+    B00000
+  };
+ 
+byte enfadado[8] = {
+    B00000,
+    B00000,
+    B01010,
+    B00000,
+    B00000,
+    B01110,
+    B10001,
+    B00000
+  };
+ 
+void setup()
+{
+  //Creamos los 3 caracteres asignandoles un número a cada uno
+  lcd.createChar(0, alegre);
+  lcd.createChar(1, normal);
+  lcd.createChar(2, enfadado);
+ 
+  lcd.begin(16, 2); //Inicializamos el display configurando 16 columnas por 2 filas
+  lcd.setCursor(0,0); //Ponemos el cursor en la primera fila a la izquierda
+  lcd.print("Inicializando..."); //Imprimimos un mensaje inicial
+  delay(2000); //Esperamos 2 segundos
+  lcd.clear(); //Borramos lo que pone a la pantalla
+}
+ 
+void loop()
+{
+  //Creamos un bucle para que cambien los caracteres automaticamente
+  for(int i=0; i<3; i++)
+  {
+    lcd.setCursor(7, 1);
+    lcd.write(byte(i)); //Se escribe el caracter llamandolo a través de su número
+    delay(500);
+    lcd.clear();
+  }
+ 
+  lcd.clear();
 }
 ```
