@@ -84,6 +84,8 @@ void loop()
 }
 ```
 
+Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/df01da3c-f2f4-49ec-ae3a-bd700c8f00ec/preview)
+
 ### Creando tu propia imagen
 
 <img src="imagenes/caracteresLCD.png" height="400" width="600"/>
