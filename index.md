@@ -757,6 +757,11 @@ void loop(){
 
 Descarga el código [aquí](https://create.arduino.cc/editor/nicorl/3bacbb21-db52-45a1-bad6-3c1498ec3960/preview)
 
+### LCD
+
+<img src="imagenes/esquemaLCD.png" height="400" width="400"/>
+
+Explicación para utilizar un LCD [aquí](https://nicorl.github.io/effinno/LCD)
 
 ### Encuesta del curso
 
