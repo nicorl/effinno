@@ -43,23 +43,18 @@ Descarga la librería [aquí](https://www.arduino.cc/en/Reference/LiquidCrystal)
 
 – clear(): Limpia la pantalla LCD y posiciona el cursor en la parte superior izquierda.
 
-<img src="imagenes/esquemaLCD.png" height="400" width="600"/>
+
+#### Esquema
+
+<img src="imagenes/LCD_Base_bb_Fritz.png" height="400" width="600"/>
 
 <img src="imagenes/esquemaelectricoLCD.png" height="400" width="600"/>
 
-<img src="imagenes/caracteresLCD.png" height="400" width="600"/>
 
 #### Código
 
 ```cpp
-/*
-  www.diymakers.es
-  by A.García
-  17/08/14
-  Aprender a usar un Display LCD
-  Tutorial en: http://diymakers.es/aprender-usar-un-display-lcd/
-*/
- 
+
 #include <LiquidCrystal.h> //Importamos la librería LiquidCrystal
  
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2); //Creamos la variable y establecemos los pins del display
@@ -82,7 +77,7 @@ void loop()
  
   //Segunda fila
   lcd.setCursor(0, 1);
-  lcd.print("DIYMAKERS");
+  lcd.print("EFFINNO");
   delay(2000);
  
   lcd.clear(); //Borramos lo que pone a la pantalla
@@ -90,6 +85,9 @@ void loop()
 ```
 
 ### Creando tu propia imagen
+
+<img src="imagenes/caracteresLCD.png" height="400" width="600"/>
+
 
 Cada una de las ocho líneas del carácter es 1 byte. Por lo tanto, para crear un carácter tenemos que usar 8 bytes. Para entender esto, vamos a crear el siguiente carácter:
 
