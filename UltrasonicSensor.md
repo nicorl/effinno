@@ -114,7 +114,7 @@ void loop() {
    delay(50);
    unsigned int uS = sonar.ping_cm();
    Serial.print(uS);
-   Serial.println(“cm”);
+   Serial.println("cm");
 }
 
 ```
