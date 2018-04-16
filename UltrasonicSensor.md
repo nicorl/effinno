@@ -91,32 +91,63 @@ void loop()
 
 Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/94ffe2d2-c62c-44ed-80a4-4234415c8a1f/preview)
 
-## Utilizando librería NewPing
+## Utilizando LiquidCrystal para mostrar el resultado
 
 ```javascript
+#include <LiquidCrystal.h> //Importamos la librería LiquidCrystal
+ 
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2); //Creamos la variable y establecemos los pins del display
+ 
+int PinEnvio = 9;    //Trig - emisor
+int PinVuelta = 10;    //Echo - receptor
+long duracion, cm; 
 
-/*
- * Posted on http://randomnerdtutorials.com
- * created by http://playground.arduino.cc/Code/NewPing
-*/
 
-#include <NewPing.h>
- 
-#define TRIGGER_PIN 11
-#define ECHO_PIN 12
-#define MAX_DISTANCE 200
- 
-NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // NewPing setup of pins and maximum distance.
- 
-void setup() {
-   Serial.begin(9600);
+void setup()
+{
+  lcd.begin(16, 2); //Inicializamos el display configurando 16 columnas por 2 filas
+  lcd.setCursor(0,0); //Ponemos el cursor en la primera fila a la izquierda
+  lcd.print("Inicializando..."); //Imprimimos un mensaje inicial
+  delay(2000); //Esperamos 2 segundos
+  lcd.clear(); //Borramos lo que pone a la pantalla
+  
+  //Puerto para comunicaciones
+  Serial.begin (9600);
+  //Definir entradas y salidas
+  pinMode(PinEnvio, OUTPUT);
+  pinMode(PinVuelta, INPUT);
 }
  
-void loop() {
-   delay(50);
-   unsigned int uS = sonar.ping_cm();
-   Serial.print(uS);
-   Serial.println("cm");
-}
+void loop()
+{
+  //Primera fila
+  lcd.setCursor(0, 0);
+  lcd.print("DISTANCIA MEDIDA");
+ 
+   // The sensor is triggered by a HIGH pulse of 10 or more microseconds.
+  // Give a short LOW pulse beforehand to ensure a clean HIGH pulse:
+  digitalWrite(PinEnvio, LOW);
+  delayMicroseconds(5);
+  digitalWrite(PinEnvio, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(PinEnvio, LOW);
+ 
+  // Lee la señal del sensor: un pulso HIGH cuya
+  // duración es el tiempo (en microsegundos) desde el envio
+  // del PING hasta su recepción.
+  pinMode(PinVuelta, INPUT);
+  duracion = pulseIn(PinVuelta, HIGH);
+ 
+  // Convertir el tiempo en distancia
+  cm = (duracion/2) / 29.1;
 
+ 
+  //Segunda fila
+  lcd.setCursor(0, 1);
+  lcd.print(cm);
+  delay(200);
+ 
+  lcd.clear(); //Borramos lo que pone a la pantalla
+}
 ```
+Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/5b8ef3ea-9018-4403-8c43-020ba1069a1e/preview)
