@@ -89,6 +89,8 @@ void loop()
 
 ```
 
+Descarga este código [aquí](https://create.arduino.cc/editor/nicorl/94ffe2d2-c62c-44ed-80a4-4234415c8a1f/preview)
+
 ## Utilizando librería NewPing
 
 ```javascript
