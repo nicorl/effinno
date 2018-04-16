@@ -1,6 +1,6 @@
 # Funcionamiento
 
-HC-SR04 es un sensor ultrasónico que utiliza sonar para determinar a la distanca a la que un objeto está y su rango puede llegar hasta 4 metros..
+HC-SR04 es un sensor ultrasónico que utiliza sonar para determinar a la distanca a la que un objeto está y su rango puede llegar hasta 4 metros.
 
 ## Caracteristicas
 
@@ -28,7 +28,7 @@ El transmisor envia una señal, un sonido de alta frecuencia, la señal rebota e
 
 ## Esquema del sensor
 
-<img src="imagenes/HC-SR04.png" height="400" width="600"/>
+<img src="imagenes/HC-SR04.png" height="200" width="300"/>
 
 VCC: Conexión de +5VDC
 
