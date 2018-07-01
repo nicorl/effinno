@@ -42,6 +42,22 @@ void loop() {
   delay(1);
 }
 ```
+
+### Convirtiendo el valor a analógico
+
+```javascript
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int sensorValue = analogRead(A0);
+  float voltage = sensorValue * (5.0 / 1023.0);
+  Serial.println(voltage);
+  delay(1);
+}
+```
+
 ## Lectura digital de un potenciómetro
 
 Los botones permiten conectar dos puntos en un circuito cuando se presionan. 
