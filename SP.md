@@ -67,7 +67,7 @@ https://paletosdelaelectronica.wordpress.com/2015/01/25/resistencias-pull-up-y-p
 
 ### Esquemas
 
-<img src="imagenes/button_basics.png" height="300" width="400"/>
+<img src="imagenes/button_basics.png" height="300" width="700"/>
 
 <img src="imagenes/button_sch.png" height="300" width="200"/>
 
@@ -100,7 +100,7 @@ Este ejemplo se basa en utilizar el PWM (_Pulse Width Modulation_) para encender
 
 Conectamos el ánodo del LED (patilla larga, +) al pin digital 9 a través de una resistencia de 220 Ohm. El cátodo (-) se conecta directamente a tierra. 
 
-<img src="imagenes/simplefade_bb.png" height="300" width="200"/>
+<img src="imagenes/simplefade_bb.png" height="300" width="700"/>
 
 <img src="imagenes/simplefade_pin9_schem.png" height="300" width="200"/>
 
