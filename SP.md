@@ -31,7 +31,7 @@ En la parte del ```setup``` se establecerá el _serial_ de comunicación.
 
 En la parte del ```loop``` se define una variable para guardar el valor recogido y un comando para enviar la variable hasta el ordenador.
 
-```
+```javascript
 void setup() {
   Serial.begin(9600);
 }
@@ -41,4 +41,38 @@ void loop() {
   Serial.println(sensorValue);
   delay(1);
 }
+```
+## Lectura digital de un potenciómetro
+
+Los botones permiten conectar dos puntos en un circuito cuando se presionan. 
+Cuando el botón está abierto, no hay conexión entre las patillas del botón, por lo que el _pin_ está conectado a tierra a través de la resistencia _pull-down_ y lee LOW o 0. Cuando el botón está cerrado, hace una conexión entre sus dos patas, conectando el pin a 5 voltios, por lo que devuelve HIGH o 1.
+
+https://paletosdelaelectronica.wordpress.com/2015/01/25/resistencias-pull-up-y-pull-down/
+
+### Esquemas
+
+<img src="imagenes/button_basics.png" height="300" width="200"/>
+
+<img src="imagenes/button_sch.png" height="300" width="200"/>
+
+### Código
+
+En la parte de ```setup``` definimos el _serial_ de comunicación. Además, inicializamos el pin 2, como pin de lectura del botón como entrada (INPUT).
+
+En la parte de ```loop``` se configura para que cuando el botón sea pulsado, 5 voltios fluyan a través del circuito, y cuando el botón no es pulsado, esté conectado a tierra a través de una resistencia de 10 kOhm. La entrada digital solo podrá ser 0 o 1, sin valores intermedios.
+
+```javascript
+int pushButton = 2;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(pushButton, INPUT);
+}
+
+void loop() {
+  int buttonState = digitalRead(pushButton);
+  Serial.println(buttonState);
+  delay(1);       
+}
+
 ```
