@@ -21,9 +21,9 @@ Arduino tiene un circuito ADC (Analog to Digital Converter) que lee el valor del
 
 ### Esquemas
 
-<img src="imagenes/AnalogReadSerial_BB.png" height="600" width="400"/>
+<img src="imagenes/AnalogReadSerial_BB.jpg" height="600" width="400"/>
 
-<img src="imagenes/AnalogReadSerial_sch.png" height="600" width="400"/>
+<img src="imagenes/AnalogReadSerial_sch.jpg" height="600" width="400"/>
 
 ### Código
 
