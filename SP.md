@@ -67,7 +67,7 @@ https://paletosdelaelectronica.wordpress.com/2015/01/25/resistencias-pull-up-y-p
 
 ### Esquemas
 
-<img src="imagenes/button_basics.png" height="300" width="200"/>
+<img src="imagenes/button_basics.png" height="300" width="400"/>
 
 <img src="imagenes/button_sch.png" height="300" width="200"/>
 
