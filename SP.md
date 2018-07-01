@@ -91,3 +91,43 @@ void loop() {
   delay(1);       
 }
 ```
+
+## Fading de LED. PWM.
+
+Este ejemplo se basa en utilizar el PWM (_Pulse Width Modulation_) para encender y apagar un pin muy rápido con diferentes valores entre ON y OFF, para crear un efecto de degradado/fading.
+
+### Circuito
+
+Conectamos el ánodo del LED (patilla larga, +) al pin digital 9 a través de una resistencia de 220 Ohm. El cátodo (-) se conecta directamente a tierra. 
+
+<img src="imagenes/simplefade_bb.png" height="300" width="200"/>
+
+<img src="imagenes/simplefade_pin9_schem.png" height="300" width="200"/>
+
+### Código
+
+Dentro de ```setup```, asignamos el pin 9 como OUTPUT.
+
+En el código de ```loop```, utilizaremos la funcion ```analogWrite()``` que utiliza como argumentos el PIN donde está el led enchufado, y el valor PWM a enviarle. 
+El degradado varía desde 0 a 255, donde el ```brillo```en 0 es apagado y en 255 es a máximo valor que puede emitir. Para el incremento/decremento de la variable ```brillo``` usamos ```cantidadDegradado``` para incrementar/decrementar de 5 en 5.
+
+```javascript
+int led = 9;           
+int brillo = 0;    
+int cantidadDegradado = 5;    
+
+void setup() {
+  pinMode(led, OUTPUT);
+}
+
+void loop() {
+  analogWrite(led, brillo);
+
+  brillo = brillo + cantidadDegradado;
+
+  if (brillo <= 0 || brillo >= 255) {
+    cantidadDegradado = -cantidadDegradado;
+  }
+  delay(30);
+}
+```
